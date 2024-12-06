@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renta de Mobiliario Teziutlán</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: slide 15s infinite;
+        }
+
+        @keyframes slide {
+            0%, 20% {transform: translateX(0);}
+            25%, 45% {transform: translateX(-100%);}
+            50%, 70% {transform: translateX(-200%);}
+            75%, 100% {transform: translateX(-300%);}
+        }
+
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #333;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .cta {
+            background: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cta a {
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .cta a:hover {
+            background: #feac5e;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #feac5e;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Renta de Mobiliario Teziutlán</h1>
+        <p>¡Hacemos de tu evento algo inolvidable!</p><nav>
+            <a href="domain.tld/inicio">Inicio</a>
+            <a href=pedidos.html>Pedidos Activos</a>
+            <a href=”domain.tld/Cuenta”>Mi Cuenta</a>
+         </nav>
+
+    </header>
+
+    <div class="carousel">
+        <img src="boda.JPEG" alt="no esta" width="3200" height="3000" alt="Bodas">
+        <img src="corporativo.png" alt="no esta" width="3200" height="3000" alt="Eventos Corporativos">
+        <img src="decoraciones.png" alt="no esta" width="3200" height="3000" alt="Decoración">
+        <img src="domingo.PNG" alt="no esta" width="700" height="300" alt="Fiestas Privadas">
+        <img src="EVENTO1.JPEG" alt="no esta" width="1200" height="500" alt="Fiestas Privadas">
+    </div>
+
+    <section class="section">
+        <h2>Nuestros Servicios</h2>
+        <p>Ofrecemos mobiliario de alta calidad para bodas, eventos corporativos y fiestas privadas.</p>
+        <div class="gallery">
+            <img src="mesa1.png" alt="no esta" width="300" height="200" alt="Mesas">
+            <img src="imagen2.png" alt="no esta" width="300" height="200" alt="Sillas">
+            <img src="carpa1.png" alt="no esta" width="300" height="200" alt="Carpas">
+            <img src="camino7.JPEG" alt="no esta" width="300" height="200"alt="Mantelería">
+            <nav>
+                <button onclick="location.href='sillas.html'">Sillas</button>
+                <button onclick="location.href='mesa.html'">Mesas</button>
+                <button onclick="location.href='carpas.html'">Carpas</button>
+                <button onclick="location.href='manteles.html'">Manteleria</button>
+                <button onclick="location.href='cubiertos.html'">Cubiertos</button>
+                
+            </nav>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>¿Listo para tu evento?</h2>
+        <p>Haz clic en el botón para cotizar o contáctanos.</p>
+        <button id="btn-consultar" class="btn-consultar">Consultar</button>
+        <script>
+            const btnConsultar = document.getElementById("btn-consultar");
+    
+             btnConsultar.addEventListener("click", function () {
+              alert("Has presionado el botón 'Consultar'. Aquí puedes realizar tu acción."); 
+             // Puedes redirigir o realizar otra acción:
+            window.location.href = "consultas.html"; // Ejemplo de redirección
+            });
+        </script>
+
+    <footer>
+        <p>&copy; 2024 Renta de Mobiliario Teziutlán. Todos los derechos reservados. <a href="#">Políticas de Privacidad</a></p>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
